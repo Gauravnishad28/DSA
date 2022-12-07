@@ -18,7 +18,7 @@ for i in range(0,s):
     a.append(temp)
 print("Enter Number to be searched")
 x =int(input())
-r=search(a, 0, len(a)-1, x)
+r=search(a,0,len(a)-1,x)
 
 if r!=-1:
 	print("Element is present at index no.", str(r))
