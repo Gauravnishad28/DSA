@@ -1,0 +1,26 @@
+def search(a,low,high,x):
+	if high>=low:
+		mid=low+(high-low)// 2
+		if a[mid]==x:
+			return mid
+		elif a[mid]>x:
+			return search(a,low,mid-1,x)
+		else:
+			return search(a,mid+1,high,x)
+	else:
+		return -1
+print("Enter size of array")
+s=int(input())
+print("Enter Elements in array")
+a=[]
+for i in range(0,s):
+    temp=int(input())
+    a.append(temp)
+print("Enter Number to be searched")
+x =int(input())
+r=search(a, 0, len(a)-1, x)
+
+if r!=-1:
+	print("Element is present at index no.", str(r))
+else:
+	print("Element is not present in the given array")
